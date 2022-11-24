@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\Program.csproj": {}
+    "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\Library.csproj": {
+    "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\Flori\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Flori\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj": {
-                "projectPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj"
+              "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj": {
+                "projectPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj"
               }
             }
           }
@@ -97,7 +97,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,18 +107,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\Program.csproj": {
+    "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\Program.csproj",
+        "projectPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\Program.csproj",
         "packagesPath": "C:\\Users\\Flori\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\obj\\",
+        "outputPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Flori\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -132,8 +133,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Library\\Library.csproj"
+              "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Library\\Library.csproj"
               }
             }
           }
@@ -203,7 +204,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -212,18 +214,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj": {
+    "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj",
         "projectName": "Ucu.Poo.Locations.Client",
-        "projectPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj",
+        "projectPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\Ucu.Poo.Locations.Client.csproj",
         "packagesPath": "C:\\Users\\Flori\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Flori\\Desktop\\Luqueta\\PII_LocationApiClient-master\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\PII_LocationApiClient-master\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Flori\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -269,7 +271,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -278,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,16 +5,16 @@ namespace Ucu.Poo.TelegramBot
     /// <summary>
     /// Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
     /// </summary>
-    public class GestiHandler : BaseHandler
+    public class ChauHandler : BaseHandler
     {
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
         /// y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
-        public GestiHandler(BaseHandler next) : base(next)
+        public ChauHandler(BaseHandler next) : base(next)
         {
-            this.Keywords = new string[] { "Gesti", "gesti" };
+            this.Keywords = new string[] { "Gracias por invitarnos a todos a festejar tu cumple!", "gracias por invitarnos a todos a festejar tu cumple!" };
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace Ucu.Poo.TelegramBot
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            response = "Es bueno para los juegos, pero deja que desear en la cama";
+            response = "De nada manga de putos";
         }
     }
 }

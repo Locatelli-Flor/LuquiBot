@@ -22,10 +22,10 @@ namespace Ucu.Poo.TelegramBot
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
         /// <param name="bot">El bot para enviar la foto.</param>
-        public AugusHandler(TelegramBotClient bot, BaseHandler next)
-            : base(new string[] { "Augusto", "augusto" }, next)
+        public AugusHandler(BaseHandler next)
+            : base(next)
         {
-            this.bot = bot;
+            this.Keywords = new string[] { "Augusto", "augusto" };
         }
 
         /// <summary>
@@ -36,29 +36,12 @@ namespace Ucu.Poo.TelegramBot
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            AsyncContext.Run(() => this.SendProfileImage(message));
-             response = String.Empty;
+            response = "Estoy hasta las pelotas de que me pide que le cuente algo picante";
         }
 
         /// <summary>
         /// Envía una imagen como respuesta al mensaje recibido. Como ejemplo enviamos siempre la misma foto.
         /// </summary>
-        private async Task SendProfileImage(Message message)
-        {
-            // Can be null during testing
-            if (this.bot != null)
-            {
-                await this.bot.SendChatActionAsync(message.Chat.Id, ChatAction.UploadPhoto);
-
-                const string filePath = @"Augus.jpg";
-                using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-                var fileName = filePath.Split(Path.DirectorySeparatorChar).Last();
-
-                await this.bot.SendPhotoAsync(
-                    chatId: message.Chat.Id,
-                    photo: new InputOnlineFile(fileStream, fileName),
-                    caption: "");
-            }
-        }
+        
     }
 }

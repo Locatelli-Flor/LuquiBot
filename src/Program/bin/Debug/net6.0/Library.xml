@@ -4,207 +4,6 @@
         <name>Library</name>
     </assembly>
     <members>
-        <member name="T:Chatbot.Administrador">
-            <summary>
-            Clase Administrador.
-            Principios y/o Patrones utilizados para implementar la clase:
-            Creator: Es la única clase que tiene la responsabilidad de crear y borrar categorías.
-            SRP: La única responsabilidad de la clase es administrar las categorías y servicios. Además.
-            ISP: Los tipos que implementa la clase los utiliza. Por ejemplo: IUsuario y los Atributos Nombre y Email que se usan para crear una instancia de Administrador.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Administrador.#ctor(System.String,System.String)">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Administrador.AgregarCategoria(Chatbot.Categoria)">
-            <summary>
-            Método AgregarCategoría. Crea una categoría y la añade a la lista de categorías.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Administrador.QuitarCategoria(Chatbot.Categoria)">
-            <summary>
-            Método QuitarCategoría. Quita una categoría de la lista de categorías.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Administrador.QuitarServicio(Chatbot.Servicio)">
-            <summary>
-            Método QuitarServicio. Quita un servicio de la lista de servicios.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Categoria">
-            <summary>
-            Clase Categoría.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Categoria.#ctor(System.String)">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="T:Chatbot.CheckCalificacion">
-            <summary>
-            Clase CheckCalificacion. Clase que hereda de Exception. Se creó para asegurar que las calificaciones dadas al momento de calificar un contrato sean válidas.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Contrato">
-            <summary>
-            Clase Contrato.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Contrato.#ctor(Chatbot.Trabajador,Chatbot.Empleador,Chatbot.Servicio)">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Empleador">
-            <summary>
-            Clase Empleador.
-            Patrones y/o Principios utilizados para implementar la clase:
-            Creator: En el método ContratarServicio se crea un objeto de la clase SolicitudContratacion. El que tiene la responsabilidad de hacer esto es Empleador porque es el que le interesa contratar a alguien.
-            ISP: Los tipos que implementa la clase los utiliza. Por ejemplo: ICalificable y los métodos Calificar y GetCalificacion.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.#ctor(System.String,System.String,System.String,System.Tuple{System.Double,System.Double})">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetCalificacion">
-            <summary>
-            Método GetCalificacion. Itera sobre la lista de contratos y si ya fueron calificados, los suma al total. Luego intenta hacer el total, teniendo en cuenta que si el empleador no tiene ninguna calificacion va a salir la excepción DivideByZeroError.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.ContratarServicio(Chatbot.Servicio)">
-            <summary>
-            Método ContratarServicio. Crea una solicitud de contratación y la agrega a la lista de solicitudes del trabajador dueño del servicio interesado.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetServicios">
-            <summary>
-            Método GetServicios. Retorna la lista de servicios.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetCategorias">
-            <summary>
-            Método GetCategoría. Retorna la lista de categorías.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetServiciosPorCategoria(Chatbot.Categoria)">
-            <summary>
-            Método GetServiciosPorCategoría. Llama al método FiltrarCategoría de la clase OfertaServicio, donde se ordenan los servicios según la categoría a fitrar.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetServiciosPorReputacion">
-            <summary>
-            Método GetServiciosPorReputacion. Llama al método FiltrarReputacion de la clase OfertaServicio, donde se ordenan los servicios según la reputación de los trabajadores.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.GetServiciosPorUbicacion">
-            <summary>
-            Método GetServiciosPorUbicacion. Llama al método FiltrarUbicacion de la clase OfertaServicio, donde se ordenan los servicios según la ubicación en orden ascendente.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Empleador.Contactar(Chatbot.Servicio)">
-            <summary>
-            Método Contactar. Retorna el teléfono del trabajador.
-            </summary>
-        </member>
-        <member name="T:Chatbot.ICalificable">
-            <summary>
-            Interfaz ICalificable. Implementamos estas interfaces en Trabajador y Empleador para cumplir con el principio ISP. Cada método de esta interfaz es usada para todos las clases que la implementan.
-            </summary>
-        </member>
-        <member name="T:Chatbot.IUsuario">
-            <summary>
-            Interfaz IUsuario. Implementamos estas interfaces en Trabajador, Empleador y Administración para cumplir con el principio ISP. Cada propiedad de esta interfaz es usada para todos las clases que la implementan.
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "T:Chatbot.OfertaServicios" -->
-        <member name="M:Chatbot.OfertaServicios.FiltrarUbicacion(Chatbot.Empleador)">
-            <summary>
-            Método FiltrarUbicación. Hace uso de la fórmula para calcular la distancia entr dos puntos (La distancia actual y la de cada servicio en la lista de servicios). Retorna una Lista con todos los servicios ordenados de manera ascendente por ubicación.
-            </summary>
-        </member>
-        <member name="M:Chatbot.OfertaServicios.FiltrarReputacion">
-            <summary>
-            Método FiltrarReputación. Ordena la Lista de servicios según la calificación total de cada trabajador y la retorna.
-            </summary>
-        </member>
-        <member name="M:Chatbot.OfertaServicios.FiltrarCategoria(Chatbot.Categoria)">
-            <summary>
-            Método FiltrarCategoría. Crea una lista donde se van a agregar aquellos servicios que coincidan con la Categoría a filtrar y la retorna.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Servicio">
-            <summary>
-            Clase servicio.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Servicio.#ctor(System.String,Chatbot.Categoria,Chatbot.Trabajador,System.Int32)">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Singleton`1">
-            <summary>
-            Clase Singleton: La implementamos para poder utilizar el patrón Singleton en las clases.
-            </summary>
-        </member>
-        <member name="T:Chatbot.SolicitudContratacion">
-            <summary>
-            Clase SolicitudContratacion.
-            </summary>
-        </member>
-        <member name="M:Chatbot.SolicitudContratacion.#ctor(Chatbot.Empleador,Chatbot.Servicio)">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="T:Chatbot.Trabajador">
-            <summary>
-            Clase Trabajador.
-            Principios y/o Patrones utilizados para implementar la clase:
-            Creator: Trabajador contiene objetos de clase Contrato, por lo que tiene la responsabilidad de confirmar la solicitud y crear el contrato
-            ISP: Los tipos que implementa la clase los utiliza. Por ejemplo: ICalificable y los métodos Calificar y GetCalificacion.
-            </summary>
-        </member>
-        <member name="F:Chatbot.Trabajador.Solicitudes">
-            <summary>
-            Esta lista de Solicitudes tiene un registro de aquellos empleadores que estén interesados en contratar un servicio del trabajador.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.#ctor(System.String,System.String,System.String,System.Tuple{System.Double,System.Double})">
-            <summary>
-            El constructor de la clase.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.GetCategorias">
-            <summary>
-            Método GetCategorías. Retorna la única lista de categorías existente.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.GetCalificacion">
-            <summary>
-            Método GetCalificación. Itera sobre todos los contratos del trabajador y si estos todavía no fueron calificados no los tiene en cuenta. En el caso contrario, los suma al total de calificaciones y aumenta el contador de calificaciones. Luego retorna el promedio de calificaciones.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.CrearServicio(System.String,Chatbot.Categoria,System.Int32)">
-            <summary>
-            Método CrearServicio. Crea una instancia de Servicio con los parámetros dados y lo agrega a la única lista de servicios.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.QuitarSuServicio(Chatbot.Servicio)">
-            <summary>
-            Método QuitarServicio. Primero se asegura que el servicio a remover sea de propiedad del trabajador que llama al método. Si esto se cumple, lo elimina de la única lista de servicios.
-            </summary>
-        </member>
-        <member name="M:Chatbot.Trabajador.AceptarSolicitud(Chatbot.SolicitudContratacion,System.Boolean)">
-            <summary>
-            Método AceptarSolicitud. Entra como parámetro un objeto de la clase SolicitudContratacion. Este contiene el servicio interesado y el empleador interesado. Si el trabajador decide aceptar la solicitud, se crea un Contrato con los datos de la solicitud y el trabajador, y luego lo añade a la lista de contratos del empleador interesado. Por último, la solicitud se elimina de la lista de solicitudes pendientes del trabajador.
-            </summary>
-        </member>
         <member name="T:Ucu.Poo.TelegramBot.AddressFinder">
             <summary>
             Un buscador de direcciones concreto que usa una API de localización.
@@ -295,7 +94,7 @@
             Un "handler" del patrón Chain of Responsibility que implementa el comando "foto".
             </summary>
         </member>
-        <member name="M:Ucu.Poo.TelegramBot.AugusHandler.#ctor(Telegram.Bot.TelegramBotClient,Ucu.Poo.TelegramBot.BaseHandler)">
+        <member name="M:Ucu.Poo.TelegramBot.AugusHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
             <summary>
             Inicializa una nueva instancia de la clase <see cref="!:PhotoHandler"/>. Esta clase procesa el mensaje "foto".
             </summary>
@@ -309,11 +108,6 @@
             <param name="message">El mensaje a procesar.</param>
             <param name="response">La respuesta al mensaje procesado.</param>
             <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.AugusHandler.SendProfileImage(Telegram.Bot.Types.Message)">
-            <summary>
-            Envía una imagen como respuesta al mensaje recibido. Como ejemplo enviamos siempre la misma foto.
-            </summary>
         </member>
         <member name="T:Ucu.Poo.TelegramBot.BascouHandler">
             <summary>
@@ -407,6 +201,26 @@
             procesan varios mensajes cambiando de estado entre mensajes deben sobreescribir este método para volver al
             estado inicial.
             </summary>
+        </member>
+        <member name="T:Ucu.Poo.TelegramBot.ChauHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            </summary>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.ChauHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
+            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.ChauHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
+            <summary>
+            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="message">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         </member>
         <member name="T:Ucu.Poo.TelegramBot.DiaHandler">
             <summary>
@@ -527,23 +341,28 @@
         </member>
         <member name="T:Ucu.Poo.TelegramBot.DuarteHandler">
             <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "foto".
             </summary>
         </member>
-        <member name="M:Ucu.Poo.TelegramBot.DuarteHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
+        <member name="M:Ucu.Poo.TelegramBot.DuarteHandler.#ctor(Telegram.Bot.TelegramBotClient,Ucu.Poo.TelegramBot.BaseHandler)">
             <summary>
-            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
-            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            Inicializa una nueva instancia de la clase <see cref="!:PhotoHandler"/>. Esta clase procesa el mensaje "foto".
             </summary>
             <param name="next">El próximo "handler".</param>
+            <param name="bot">El bot para enviar la foto.</param>
         </member>
         <member name="M:Ucu.Poo.TelegramBot.DuarteHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
             <summary>
-            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            Procesa el mensaje "foto" y retorna true; retorna false en caso contrario.
             </summary>
             <param name="message">El mensaje a procesar.</param>
             <param name="response">La respuesta al mensaje procesado.</param>
             <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.DuarteHandler.SendProfileImage(Telegram.Bot.Types.Message)">
+            <summary>
+            Envía una imagen como respuesta al mensaje recibido. Como ejemplo enviamos siempre la misma foto.
+            </summary>
         </member>
         <member name="T:Ucu.Poo.TelegramBot.FlouHandler">
             <summary>
@@ -569,21 +388,6 @@
             <summary>
             Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
             </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.GermiHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
-            <summary>
-            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
-            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
-            </summary>
-            <param name="next">El próximo "handler".</param>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.GermiHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
-            <summary>
-            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
-            </summary>
-            <param name="message">El mensaje a procesar.</param>
-            <param name="response">La respuesta al mensaje procesado.</param>
-            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         </member>
         <member name="T:Ucu.Poo.TelegramBot.GeroHandler">
             <summary>

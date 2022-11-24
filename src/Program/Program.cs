@@ -18,7 +18,6 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InputFiles;
 using Ucu.Poo.Locations.Client;
-using Chatbot;
 
 namespace Ucu.Poo.TelegramBot
 {
@@ -112,23 +111,24 @@ namespace Ucu.Poo.TelegramBot
             firstHandler =
                 new HelloHandler(
                 new DiaHandler(
-                new AugusHandler(Bot,
+                new AugusHandler(
                 new SantiHandler(Bot,
                 new LeitoHandler(
                 new BascouHandler(
                 new FlouHandler(
-                new GermiHandler(
+                new GermiHandler(Bot,
                 new GestiHandler(
                 new JeroHandler(
                 new MaoriHandler(
                 new MarcoHandler(
                 new GeroHandler(
                 new NahuelHandler(
-                new DuarteHandler(
+                new ChauHandler(
+                new DuarteHandler(Bot,
                 new OpinionHandler(Bot,
                 new AddressHandler(new AddressFinder(client),
                 new DistanceHandler(new DistanceCalculator(client), null)
-                )))))))))))))))));
+                ))))))))))))))))));
 
             var cts = new CancellationTokenSource();
 

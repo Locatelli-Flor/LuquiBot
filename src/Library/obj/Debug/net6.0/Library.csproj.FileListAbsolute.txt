@@ -52,9 +52,6 @@ C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Library.
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Library.dll
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Library.pdb
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Library.xml
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\LibraryLocationAPI.dll
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\LibraryLocationAPI.pdb
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\LibraryLocationAPI.xml
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\obj\Debug\net6.0\Library.csproj.CopyComplete
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\obj\Debug\net6.0\ref\Library.dll
 C:\Users\Flori\Desktop\LuquiBot\src\Library\obj\Debug\net6.0\Library.csproj.AssemblyReference.cache
@@ -82,3 +79,6 @@ C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Loc
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Locations.Client.pdb
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Locations.Client.xml
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Library\obj\Debug\net6.0\Library.csproj.CopyComplete
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Locations.Client.dll
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Locations.Client.pdb
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Library\bin\Debug\net6.0\Ucu.Poo.Locations.Client.xml

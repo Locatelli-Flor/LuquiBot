@@ -25,7 +25,7 @@ namespace Ucu.Poo.TelegramBot
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            response = "falta";
+            response = "Hace años estoy esperando que Marco termine el comic fanfiction gay furro que le encargué";
         }
     }
 }

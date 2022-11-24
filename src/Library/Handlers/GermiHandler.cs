@@ -1,4 +1,13 @@
 using Telegram.Bot.Types;
+using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Telegram.Bot;
+using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.InputFiles;
+using Nito.AsyncEx;
 
 namespace Ucu.Poo.TelegramBot
 {
@@ -7,25 +16,35 @@ namespace Ucu.Poo.TelegramBot
     /// </summary>
     public class GermiHandler : BaseHandler
     {
-        /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
-        /// y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
-        /// </summary>
-        /// <param name="next">El próximo "handler".</param>
-        public GermiHandler(BaseHandler next) : base(next)
+        private TelegramBotClient bot;
+        public GermiHandler(TelegramBotClient bot, BaseHandler next)
+            : base(new string[] { "Germi", "germi" }, next)
         {
-            this.Keywords = new string[] { "Germi", "germi" };
+            this.bot = bot;
         }
 
-        /// <summary>
-        /// Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
-        /// </summary>
-        /// <param name="message">El mensaje a procesar.</param>
-        /// <param name="response">La respuesta al mensaje procesado.</param>
-        /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            response = "falta";
+            AsyncContext.Run(() => this.SendProfileImage(message));
+            response = String.Empty;
+        }
+
+        private async Task SendProfileImage(Message message)
+        {
+            // Can be null during testing
+            if (this.bot != null)
+            {
+                await this.bot.SendChatActionAsync(message.Chat.Id, ChatAction.UploadPhoto);
+
+                const string filePath = @"Germi.jpg";
+                using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+                var fileName = filePath.Split(Path.DirectorySeparatorChar).Last();
+
+                await this.bot.SendPhotoAsync(
+                    chatId: message.Chat.Id,
+                    photo: new InputOnlineFile(fileStream, fileName),
+                    caption: "Es racista");
+            }
         }
     }
 }

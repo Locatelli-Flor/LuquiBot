@@ -182,11 +182,8 @@ C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Telegram
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Library.dll
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\LibraryLocationAPI.dll
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Library.pdb
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Library.xml
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\LibraryLocationAPI.pdb
-C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\LibraryLocationAPI.xml
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\obj\Debug\net6.0\Program.csproj.CopyComplete
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\obj\Debug\net6.0\Program.genruntimeconfig.cache
 C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\obj\Debug\net6.0\ref\Program.dll
@@ -256,3 +253,6 @@ C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Program\obj\Debug\net6.0\Program.Ass
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Program\obj\Debug\net6.0\Program.csproj.CoreCompileInputs.cache
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Program\obj\Debug\net6.0\Program.csproj.CopyComplete
 C:\Users\Flori\Desktop\Luqueta\LuquiBot\src\Program\obj\Debug\net6.0\Program.genruntimeconfig.cache
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Ucu.Poo.Locations.Client.dll
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Ucu.Poo.Locations.Client.pdb
+C:\Users\Flori\Desktop\Cucu\Cosas\LuquiBot\src\Program\bin\Debug\net6.0\Ucu.Poo.Locations.Client.xml

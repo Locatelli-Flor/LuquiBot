@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6O1K04auNh6R+gMdMHFxAWldBclsIX5S/I7ag8e2GmWnZmc5rIjfH0aQewzh316lyp36fyObQC9CtcYIXjkU8Q==",
+  "dgSpecHash": "TStomio6yZxJd8nUMYQ611h5Uo5hlnBjOZxsW4YeTYr5HDUHlKEX1pR2jSEJtmjGUFCHmPYwu42CATzRxxxI2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Flori\\Desktop\\Luqueta\\LuquiBot\\src\\Program\\Program.csproj",
+  "projectFilePath": "C:\\Users\\Flori\\Desktop\\Cucu\\Cosas\\LuquiBot\\src\\Program\\Program.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Flori\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\3.0.0\\microsoft.codeanalysis.fxcopanalyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\Flori\\.nuget\\packages\\microsoft.codeanalysis.versioncheckanalyzer\\3.0.0\\microsoft.codeanalysis.versioncheckanalyzer.3.0.0.nupkg.sha512",
