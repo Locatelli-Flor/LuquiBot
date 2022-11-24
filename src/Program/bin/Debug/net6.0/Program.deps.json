@@ -583,7 +583,6 @@
       },
       "Library/1.0.0": {
         "dependencies": {
-          "LibraryLocationAPI": "1.0.0",
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "3.0.0",
           "Microsoft.Extensions.Configuration": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
@@ -595,20 +594,21 @@
           "Microsoft.Extensions.SecretManager.Tools": "2.0.2",
           "Nito.AsyncEx": "5.1.2",
           "Telegram.Bot": "17.0.0",
-          "Telegram.Bot.Extensions.Polling": "1.0.2"
+          "Telegram.Bot.Extensions.Polling": "1.0.2",
+          "Ucu.Poo.Locations.Client": "1.0.0"
         },
         "runtime": {
           "Library.dll": {}
         }
       },
-      "LibraryLocationAPI/1.0.0": {
+      "Ucu.Poo.Locations.Client/1.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "3.0.0",
           "Nito.AsyncEx": "5.1.2",
           "StyleCop.Analyzers": "1.1.118"
         },
         "runtime": {
-          "LibraryLocationAPI.dll": {}
+          "Ucu.Poo.Locations.Client.dll": {}
         }
       }
     }
@@ -1023,7 +1023,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LibraryLocationAPI/1.0.0": {
+    "Ucu.Poo.Locations.Client/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

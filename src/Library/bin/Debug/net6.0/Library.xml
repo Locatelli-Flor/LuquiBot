@@ -290,45 +290,6 @@
             El resultado de la búsqueda de la dirección ingresada.
             </summary>
         </member>
-        <member name="T:Ucu.Poo.TelegramBot.AgregarCatHandler">
-            <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "dirección".
-            </summary>
-        </member>
-        <member name="P:Ucu.Poo.TelegramBot.AgregarCatHandler.State">
-            <summary>
-            El estado del comando.
-            </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.AgregarCatHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
-            <summary>
-            Inicializa una nueva instancia de la clase <see cref="T:Ucu.Poo.TelegramBot.AddressHandler"/>.
-            </summary>
-            <param name="next">Un buscador de direcciones.</param>
-            <param name="next">El próximo "handler".</param>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Ucu.Poo.TelegramBot.AgregarCatHandler.CanHandle(Telegram.Bot.Types.Message)" -->
-        <member name="M:Ucu.Poo.TelegramBot.AgregarCatHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
-            <summary>
-            Procesa todos los mensajes y retorna true siempre.
-            </summary>
-            <param name="message">El mensaje a procesar.</param>
-            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
-            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.AgregarCatHandler.InternalCancel">
-            <summary>
-            Retorna este "handler" al estado inicial.
-            </summary>
-        </member>
-        <member name="T:Ucu.Poo.TelegramBot.AgregarCatHandler.CatState">
-            <summary>
-            Indica los diferentes estados que puede tener el comando AddressHandler.
-            - Start: El estado inicial del comando. En este estado el comando pide el nombre de la categoria y pasa al
-            siguiente estado.
-            - CatPrompt: Luego de pedir el nombre. En este estado el comando crea la categoría y vuelve al estado Start.
-            </summary>
-        </member>
         <member name="T:Ucu.Poo.TelegramBot.AugusHandler">
             <summary>
             Un "handler" del patrón Chain of Responsibility que implementa el comando "foto".
@@ -683,25 +644,6 @@
             <param name="response">La respuesta al mensaje procesado.</param>
             <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         </member>
-        <member name="T:Ucu.Poo.TelegramBot.HelpHandler">
-            <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "ayuda".
-            </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.HelpHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
-            <summary>
-            Inicializa una nueva instancia de la clase <see cref="T:Ucu.Poo.TelegramBot.HelloHandler"/>. Esta clase procesa el mensaje "ayuda".
-            </summary>
-            <param name="next">El próximo "handler".</param>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.HelpHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
-            <summary>
-            Procesa el mensaje "ayuda" y retorna true; retorna false en caso contrario.
-            </summary>
-            <param name="message">El mensaje a procesar.</param>
-            <param name="response">La respuesta al mensaje procesado.</param>
-            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
-        </member>
         <member name="T:Ucu.Poo.TelegramBot.IAddressFinder">
             <summary>
             Una interfaz define una abstracción para un buscador de direcciones genérico.
@@ -811,6 +753,26 @@
             caso de error por ejemplo.
             </summary>
         </member>
+        <member name="T:Ucu.Poo.TelegramBot.JeroHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            </summary>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.JeroHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
+            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.JeroHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
+            <summary>
+            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="message">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
+        </member>
         <member name="T:Ucu.Poo.TelegramBot.LeitoHandler">
             <summary>
             Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
@@ -824,6 +786,46 @@
             <param name="next">El próximo "handler".</param>
         </member>
         <member name="M:Ucu.Poo.TelegramBot.LeitoHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
+            <summary>
+            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="message">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
+        </member>
+        <member name="T:Ucu.Poo.TelegramBot.MaoriHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            </summary>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.MaoriHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
+            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.MaoriHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
+            <summary>
+            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="message">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
+        </member>
+        <member name="T:Ucu.Poo.TelegramBot.MarcoHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            </summary>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.MarcoHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
+            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Ucu.Poo.TelegramBot.MarcoHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
             <summary>
             Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
             </summary>
@@ -852,63 +854,6 @@
             <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         </member>
         <!-- Badly formed XML comment ignored for member "T:Ucu.Poo.TelegramBot.OpinionHandler.OpiState" -->
-        <member name="T:Ucu.Poo.TelegramBot.QuitarCatHandler">
-            <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "dirección".
-            </summary>
-        </member>
-        <member name="P:Ucu.Poo.TelegramBot.QuitarCatHandler.State">
-            <summary>
-            El estado del comando.
-            </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.QuitarCatHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
-            <summary>
-            Inicializa una nueva instancia de la clase <see cref="T:Ucu.Poo.TelegramBot.AddressHandler"/>.
-            </summary>
-            <param name="next">Un buscador de direcciones.</param>
-            <param name="next">El próximo "handler".</param>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:Ucu.Poo.TelegramBot.QuitarCatHandler.CanHandle(Telegram.Bot.Types.Message)" -->
-        <member name="M:Ucu.Poo.TelegramBot.QuitarCatHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
-            <summary>
-            Procesa todos los mensajes y retorna true siempre.
-            </summary>
-            <param name="message">El mensaje a procesar.</param>
-            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
-            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.QuitarCatHandler.InternalCancel">
-            <summary>
-            Retorna este "handler" al estado inicial.
-            </summary>
-        </member>
-        <member name="T:Ucu.Poo.TelegramBot.QuitarCatHandler.CatState">
-            <summary>
-            Indica los diferentes estados que puede tener el comando AddressHandler.
-            - Start: El estado inicial del comando. En este estado el comando pide el nombre de la categoria y pasa al
-            siguiente estado.
-            - CatPrompt: Luego de pedir el nombre. En este estado el comando crea la categoría y vuelve al estado Start.
-            </summary>
-        </member>
-        <member name="T:Ucu.Poo.TelegramBot.RegistroHandler">
-            <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "registro".
-            </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.RegistroHandler.InternalCancel">
-            <summary>
-            Retorna este "handler" al estado inicial.
-            </summary>
-        </member>
-        <member name="T:Ucu.Poo.TelegramBot.RegistroHandler.RegState">
-            <summary>
-            Indica los diferentes estados que puede tener el comando RegistroHandler.
-            - Start: El estado inicial del comando. En este estado el comando pide el nombre de la categoria y pasa al
-            siguiente estado.
-            - RegPrompt: Luego de pedir el nombre. En este estado el comando crea la categoría y vuelve al estado Start.
-            </summary>
-        </member>
         <member name="T:Ucu.Poo.TelegramBot.SantiHandler">
             <summary>
             Un "handler" del patrón Chain of Responsibility que implementa el comando "dirección".
@@ -926,26 +871,6 @@
             <summary>
             Retorna este "handler" al estado inicial.
             </summary>
-        </member>
-        <member name="T:Ucu.Poo.TelegramBot.VerCategoriaHandler">
-            <summary>
-            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
-            </summary>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.VerCategoriaHandler.#ctor(Ucu.Poo.TelegramBot.BaseHandler)">
-            <summary>
-            Inicializa una nueva instancia de la clase <see cref="!:GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
-            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
-            </summary>
-            <param name="next">El próximo "handler".</param>
-        </member>
-        <member name="M:Ucu.Poo.TelegramBot.VerCategoriaHandler.InternalHandle(Telegram.Bot.Types.Message,System.String@)">
-            <summary>
-            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
-            </summary>
-            <param name="message">El mensaje a procesar.</param>
-            <param name="response">La respuesta al mensaje procesado.</param>
-            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         </member>
     </members>
 </doc>

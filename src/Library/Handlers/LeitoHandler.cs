@@ -25,7 +25,7 @@ namespace Ucu.Poo.TelegramBot
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            response = "Es putazo, aunque manda buenas fototetas";
+            response = "La chupa re bien y manda buenas fototetas";
         }
     }
 }

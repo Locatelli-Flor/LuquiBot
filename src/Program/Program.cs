@@ -115,12 +115,20 @@ namespace Ucu.Poo.TelegramBot
                 new AugusHandler(Bot,
                 new SantiHandler(Bot,
                 new LeitoHandler(
+                new BascouHandler(
+                new FlouHandler(
+                new GermiHandler(
+                new GestiHandler(
+                new JeroHandler(
+                new MaoriHandler(
+                new MarcoHandler(
                 new GeroHandler(
                 new NahuelHandler(
+                new DuarteHandler(
                 new OpinionHandler(Bot,
                 new AddressHandler(new AddressFinder(client),
                 new DistanceHandler(new DistanceCalculator(client), null)
-                )))))))));
+                )))))))))))))))));
 
             var cts = new CancellationTokenSource();
 
