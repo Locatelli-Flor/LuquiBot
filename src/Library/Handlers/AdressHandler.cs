@@ -28,7 +28,7 @@ namespace Ucu.Poo.TelegramBot
         /// <param name="next">Un buscador de direcciones.</param>
         /// <param name="next">El próximo "handler".</param>
         public AddressHandler(IAddressFinder finder, BaseHandler next)
-            : base(new string[] { "dirección", "direccion" }, next)
+            : base(new string[] { "Podés doxear a Jope?", "podes doxear a jope?" }, next)
         {
             this.finder = finder;
             this.State = AddressState.Start;
@@ -75,7 +75,7 @@ namespace Ucu.Poo.TelegramBot
                 if (this.Data.Result.Found)
                 {
                     // Si encuentra la dirección pasa nuevamente al estado Initial
-                    response = $"La dirección es en {Data.Result.Latitude},{Data.Result.Longitude}";
+                    response = $"Doxeadisimo: {Data.Result.Latitude},{Data.Result.Longitude}";
                     this.State = AddressState.Start;
                 }
                 else
