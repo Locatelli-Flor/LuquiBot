@@ -103,21 +103,21 @@ namespace Ucu.Poo.TelegramBot
 
             Bot = new TelegramBotClient(token);
             
-            string jsonListaCat = System.IO.File.ReadAllText(@"..\..\serializacion\ListaDeCategorias.json");
-            Singleton<ListaCategorias>.Instance.LoadFromJson(jsonListaCat);
+            //string jsonListaCat = System.IO.File.ReadAllText(@"..\..\serializacion\ListaDeCategorias.json");
+            //Singleton<ListaCategorias>.Instance.LoadFromJson(jsonListaCat);
 
-            string jsonListaContratos = System.IO.File.ReadAllText(@"..\..\serializacion\ListaDeContratos.json");
+            //string jsonListaContratos = System.IO.File.ReadAllText(@"..\..\serializacion\ListaDeContratos.json");
             //Singleton<CatalogoContrato>.Instance.LoadFromJson(jsonListaContratos);
 
             firstHandler =
-                new HelpHandler(
                 new HelloHandler(
-                new AgregarCatHandler(
-                new VerCategoriaHandler(
-                new RegistroHandler(
-                new PhotoHandler(null,
-                new GoodByeHandler(
-                new QuitarCatHandler(
+                new DiaHandler(
+                new AugusHandler(Bot,
+                new SantiHandler(Bot,
+                new LeitoHandler(
+                new GeroHandler(
+                new NahuelHandler(
+                new OpinionHandler(Bot,
                 new AddressHandler(new AddressFinder(client),
                 new DistanceHandler(new DistanceCalculator(client), null)
                 )))))))));

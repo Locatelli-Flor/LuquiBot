@@ -13,7 +13,7 @@ namespace Ucu.Poo.TelegramBot
     /// <summary>
     /// Un "handler" del patrón Chain of Responsibility que implementa el comando "foto".
     /// </summary>
-    public class PhotoHandler : BaseHandler
+    public class AugusHandler : BaseHandler
     {
         private TelegramBotClient bot;
 
@@ -22,8 +22,8 @@ namespace Ucu.Poo.TelegramBot
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
         /// <param name="bot">El bot para enviar la foto.</param>
-        public PhotoHandler(TelegramBotClient bot, BaseHandler next)
-            : base(new string[] { "foto", "mallonesa" }, next)
+        public AugusHandler(TelegramBotClient bot, BaseHandler next)
+            : base(new string[] { "Augusto", "augusto" }, next)
         {
             this.bot = bot;
         }
@@ -50,14 +50,14 @@ namespace Ucu.Poo.TelegramBot
             {
                 await this.bot.SendChatActionAsync(message.Chat.Id, ChatAction.UploadPhoto);
 
-                const string filePath = @"profile.jpeg";
+                const string filePath = @"Augus.jpg";
                 using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
                 var fileName = filePath.Split(Path.DirectorySeparatorChar).Last();
 
                 await this.bot.SendPhotoAsync(
                     chatId: message.Chat.Id,
                     photo: new InputOnlineFile(fileStream, fileName),
-                    caption: "Te ves bien!");
+                    caption: "");
             }
         }
     }

@@ -11,9 +11,24 @@ namespace Ucu.Poo.TelegramBot
         /// Inicializa una nueva instancia de la clase <see cref="HelloHandler"/>. Esta clase procesa el mensaje "hola".
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
-        public HelloHandler(BaseHandler next) : base(next)
+        public HelloState State { get; set; }
+
+        public HelloHandler(BaseHandler next)
+            : base(new string[] { "hola", "Hola" }, next)
         {
-            this.Keywords = new string[] {"hola"};
+            this.State = HelloState.Start;
+        }
+
+        protected override bool CanHandle(Message message)
+        {
+            if (this.State ==  HelloState.Start)
+            {
+                return base.CanHandle(message);
+            }
+            else
+            {
+                return true;
+            }
         }
 
         /// <summary>
@@ -24,7 +39,37 @@ namespace Ucu.Poo.TelegramBot
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override void InternalHandle(Message message, out string response)
         {
-            response = "¡Hola! ¿Cómo estás?";
+            if(this.State == HelloState.Start)
+            {
+                response = "Hola, ¿Estás soltera?";
+                this.State = HelloState.HelloPromt;
+
+            }
+            else if(this.State == HelloState.HelloPromt)
+            {
+                if(message.Text == "si")
+                {
+                    response = "Opa... me gustó";
+                    this.State = HelloState.Start;
+                }
+                else
+                {
+                    response = "Querés estarlo?";
+                    this.State = HelloState.Start;
+                }
+                
+            }
+            else
+            {
+                response = string.Empty;
+            }
+        }
+
+
+        public enum HelloState
+        {
+            Start,
+            HelloPromt
         }
     }
 }
